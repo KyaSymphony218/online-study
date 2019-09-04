@@ -1,0 +1,22 @@
+<!--pages/index_child02/page.wxml-->
+<!-- 关于微积分 -->
+<view class="content">
+  <view class="title">
+    <image src="{{src}}" class="img"></image>
+    为什么要学AP微积分？
+  </view>
+  <view class="nav">
+    微积分在AP考试里是一个大热门的科目。其超高的热度来自于三个方面：
+    <view>{{text1}}</view>
+    <view>{{text2}}</view>
+    <view>{{text3}}</view>
+
+  </view>
+  <view class="title">
+    <image src="{{src}}" class="img"></image>
+    微积分AB和BC有什么区别？
+  </view>
+  <view class="nav">
+    <view>{{text4}}</view>
+  </view>
+</view>

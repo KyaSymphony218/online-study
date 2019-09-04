@@ -1,0 +1,32 @@
+/* pages/index_child03/page.wxss */
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-bottom: 20rpx; 
+}
+.title{
+  width: 720rpx;
+  font-weight: bold;
+  padding-bottom: 20rpx; 
+  border-bottom: 1px dashed #999; 
+}
+.title .img{
+  height: 40rpx;
+  width: 40rpx;
+}
+.nav{
+  width: 720rpx;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  text-indent: 2em;
+  box-sizing:border-box;
+  border-radius: 20rpx; 
+  font-size: 30rpx;
+  line-height: 70rpx;
+  letter-spacing: 5rpx;
+}
+.img2{
+  margin-bottom: 40rpx;
+}

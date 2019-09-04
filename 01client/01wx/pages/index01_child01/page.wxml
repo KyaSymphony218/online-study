@@ -1,0 +1,13 @@
+<!--pages/index_child01/page.wxml-->
+<!-- AP微积分介绍 -->
+<view class="content">
+  <title class="title">微积分介绍</title>
+  <view class="ps">原创：马新老师<text class="">精英培优国际教育</text>2月22日</view>
+  <image class="chanceme" src="{{src1}}"></image>
+
+  <view class="nav">
+    <view>{{text1}}</view>
+    <image class="img" src="{{src2}}"></image>
+    <view>{{text2}}</view>
+  </view>
+</view>
