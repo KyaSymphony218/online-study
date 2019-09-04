@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/03bookstore/03bookstore",
+    "pages/textbookDetails/textbookDetails",
     "pages/index/index",
     "pages/logs/logs"
   ],
