@@ -1,0 +1,84 @@
+<view class='container'>
+  <view class='head'>
+    <swiper indicator-dots='true' autoplay='true' duration='{{500}}' interval='{{2000}}'>
+      <view wx:for='{{imgUrls}}'>
+        <swiper-item>
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view class="guide">
+    <view class="guideBar" bindtap="onClick">
+      <view class="guideBarPic">
+        <image src="../../imgs/guide-flash.png"></image>
+      </view>
+      <view>动画</view>
+    </view>
+    <view class="guideBar" bindtap="onClick">
+      <view class="guideBarPic">
+        <image src="../../imgs/guide-video.png"></image>
+      </view>
+      <view>视屏</view>
+    </view>
+  </view>
+  <view class="use">
+    <view class="title">TI图形计算器教程</view>
+    <view class="content">
+      <view class="imgBox">
+        <image src="../../imgs/content01.png"></image>
+      </view>
+      <view class="textBox">
+        <view class="title">《AP微积分满分教程》</view>
+        <view class="label">
+          <view class="feature">免费</view>
+          <view class="feature">牛逼</view>
+        </view>
+        <view class="chapter">动画演示--5.1节</view>
+        <view class="author">黎曼和（Riemann Sum）</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="imgBox">
+        <image src="../../imgs/content01.png"></image>
+      </view>
+      <view class="textBox">
+        <view class="title">《AP微积分满分教程》</view>
+        <view class="label">
+          <view class="feature">免费</view>
+          <view class="feature">牛逼</view>
+        </view>
+        <view class="chapter">动画演示--5.1节</view>
+        <view class="author">黎曼和（Riemann Sum）</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="imgBox">
+        <image src="../../imgs/content01.png"></image>
+      </view>
+      <view class="textBox">
+        <view class="title">《AP微积分满分教程》</view>
+        <view class="label">
+          <view class="feature">免费</view>
+          <view class="feature">牛逼</view>
+        </view>
+        <view class="chapter">动画演示--5.1节</view>
+        <view class="author">黎曼和（Riemann Sum）</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="imgBox">
+        <image src="../../imgs/content01.png"></image>
+      </view>
+      <view class="textBox">
+        <view class="title">《AP微积分满分教程》</view>
+        <view class="label">
+          <view class="feature">免费</view>
+          <view class="feature">牛逼</view>
+        </view>
+        <view class="chapter">动画演示--5.1节</view>
+        <view class="author">黎曼和（Riemann Sum）</view>
+      </view>
+    </view>
+  </view>
+</view>
