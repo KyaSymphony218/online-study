@@ -1,0 +1,18 @@
+<view class="box">
+<view class="bill">
+<image class="img" src="../../imgs/paper.png"></image>
+<text>账单</text>
+</view>
+<view class="icon">
+<image class="img1" src="../../imgs/may.png"></image>
+<text class="text">￥0</text>
+<text>我的余额</text>
+
+</view>
+<view class="headbox">
+ <view class="recharge">充值</view>
+ <view class="embody">体现</view>
+</view>
+<view class="toolbox">
+<text class="text1">温馨提示：注意钱财安全</text></view>
+</view>

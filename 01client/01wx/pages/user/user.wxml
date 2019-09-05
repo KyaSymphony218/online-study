@@ -1,0 +1,59 @@
+<view class="bigbox">
+  <view class="box">
+    <view class="name">
+      <text>姓名</text>
+      <image class="img" src="../../imgs/pink.jpg"></image>
+    </view>
+    <view class="data">编辑个人资料</view>
+  </view>
+  <view class="headbox">
+  <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/mang.png"></image>
+   <text class="text" bindtap='toNavigate'>我的钱包</text>
+  </view>
+  <text class="text">￥0</text>
+  </view>
+  
+
+    </view>
+    <view class="blank"></view>
+    <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/book.png"></image>
+   <text class="text">我的课件库</text>
+  </view>
+  <image class="icon1" src="../../imgs/b1.png"></image>
+  </view>
+  <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/b3.png"></image>
+   <text class="text">我的试卷库</text>
+  </view>
+  <image class="icon1" src="../../imgs/b1.png"></image>
+  </view>
+  <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/b2.png"></image>
+   <text class="text">我的收藏</text>
+  </view>
+  <image class="icon1" src="../../imgs/b1.png"></image>
+  </view>
+  <view class="blank"></view>
+  <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/u1.png"></image>
+   <text class="text">身份绑定</text>
+  </view>
+ <image class="icon1" src="../../imgs/b1.png"></image>
+  </view>
+  <view class="wallet">
+   <view class="money">
+   <image class="icon" src="../../imgs/phone.png"></image>
+   <text class="text">身份绑定</text>
+  </view>
+ <image class="icon1" src="../../imgs/b1.png"></image>
+  </view>
+  
+
+</view>
