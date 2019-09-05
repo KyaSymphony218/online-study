@@ -1,0 +1,76 @@
+.bigbox{
+  width: 750rpx;
+  height: 100%;
+}
+.box{
+  width: 750rpx;
+  height: 240rpx;
+  background-color: #c9e7f1;
+  border-bottom: 1px solid#F1F1F1;
+  
+}
+.name{
+   display: flex;
+    
+   justify-content:space-between;
+   margin-left: 30rpx;
+   margin-right: 30rpx;
+   padding-top: 10rpx;
+   align-items:center;
+}
+.img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 75rpx;
+}
+.data{
+  width: 190rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  border: 1px solid gray;
+  line-height: 65rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 20rpx;
+}
+.headbox{
+  width: 750rpx;
+  height: 100%;
+   display: flex;
+   justify-content:center;
+align-items:center;
+}
+.wallet{
+  width: 650rpx;
+  height: 80rpx;
+  padding-top: 15rpx;
+  border-bottom: 1px solid #F1F1F1;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 0 auto;
+}
+.money{
+  display: flex;
+  align-items:center;
+}
+.icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left:5rpx;
+}
+
+.text{
+  margin-left: 15rpx;
+  font-size: 35rpx;
+  margin-right: 20rpx;
+}
+.blank{
+  width: 750rpx;
+  height: 80rpx;
+}
+.icon1{
+  height: 40rpx;
+  width: 50rpx;
+}
