@@ -13,13 +13,13 @@
       <view class="guideBarPic">
         <image src="../../imgs/guide-flash.png"></image>
       </view>
-      <view>动画</view>
+      <view class="guideText">动画</view>
     </view>
     <view class="guideBar" bindtap="onClick">
       <view class="guideBarPic">
         <image src="../../imgs/guide-video.png"></image>
       </view>
-      <view>视屏</view>
+      <view class="guideText">视频</view>
     </view>
   </view>
   <view class="use">
