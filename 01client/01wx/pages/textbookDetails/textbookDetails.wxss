@@ -1,1 +1,66 @@
-/* pages/textbookDetails/textbookDetails.wxss */
+.coursePackage{
+  width: 700rpx;
+  padding: 30rpx;
+  margin: 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgDetail{
+  box-shadow: 5rpx 5rpx 5rpx #ccc;
+  border-radius: 10rpx;
+}
+
+.img1{
+  width: 700rpx;
+  height: 700rpx;
+  margin: 30rpx 0;
+}
+
+.title1{
+  margin: 30rpx;
+}
+
+.content1{
+  margin: 30rpx 0;
+}
+
+.t0{
+  font-size: 35rpx;
+}
+
+.t1{
+  font-size: 30rpx;
+}
+
+.t2{
+  font-size: 30rpx;
+  color: #FF7950;
+}
+
+.price{
+  margin: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addCar{
+  padding: 0 30rpx;
+  width: 400rpx;
+  height: 80rpx;
+  border: #FF7950 1px solid;
+  border-radius: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgCar{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 50rpx;
+}

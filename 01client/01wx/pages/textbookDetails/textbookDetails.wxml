@@ -1,2 +1,26 @@
-<!--pages/textbookDetails/textbookDetails.wxml-->
-<text>pages/textbookDetails/textbookDetails.wxml</text>
+<view class="coursePackage">
+<text>教材详情</text>
+
+<view class="package" bindtap="toDetails">
+<view class="imgDetail"><image class="img1" src="../../imgs/ap2.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《AP微积分辅导手册》</text>
+<text class="t1">
+融汇众多成功案例，直击中国学生的薄弱点，解构整门考试的知识点、考点，为参加AP微积分考试的中国学生提供一套应对AP微积分（AB&BC）考试的完备方案。希望考生学完本书内容，可以顺利通过考试。《AP微积分辅导手册》一书的内容有：函数、极限和连续性、导数、微分、不定积分和定积分、积分的应用、微分方程和级数，涵盖了AP微积分AB和AP微积分BC考试大纲中要求的全部考点，并且有相关的例题演示，在理论讲解上兼顾实战性。 本书适合准备前往海外读大学的高中生，准备参加AP考试的考生学习使用，同时可用作相关培训和辅导机构的参考教材。
+</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 59.80</text>
+<text class="t1">5人已购</text>
+</view>
+</view>
+</view>
+
+<view class="addCar">
+<text>立即购买</text>
+<image class="imgCar" src="../../imgs/gouwuche.png"></image>
+</view>
+
+</view>
