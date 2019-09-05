@@ -1,0 +1,19 @@
+<!--pages/index_child03/page.wxml-->
+<!-- AP微积分考试相关 -->
+<view class="content">
+  <title class="title">
+    <image src="{{src1}}" class="img"></image>
+    试卷的形式是怎样的？
+  </title>
+  <view class="nav">{{text1}}</view>
+  <image src="{{src2}}" class="img2"></image>
+
+  <title class="title">
+    <image src="{{src1}}" class="img"></image>
+    AP微积分的容错率和5分率如何？
+  </title>
+  <view class="nav">{{text2}}</view>
+  <image src="{{src3}}" class="img2"></image>
+  <view class="nav">{{text3}}</view>
+
+</view>

@@ -1,4 +1,59 @@
-<!--index.wxml-->
-<view class="container">
-  <view>hello world！</view>
+<view class="page">
+  <!-- 轮播图 -->
+  <view class="slideshow">
+  </view>
+
+    <swiper class='nav' indicator-dots='true' autoplay='true' duration='{{500}}' interval='{{2000}}'>
+      <view wx:for='{{imgUrls}}'>
+        <swiper-item>
+          <image class="img" src='{{item}}'></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  <!--顶部导航栏-->
+
+  <view class="swiper-tab">
+
+    <view class="tab-item {{currentTab==0 ? 'titleSelet' : 'title'}}" data-current="0" bindtap="swichNav">AP微积分介绍</view>
+
+    <view class="tab-item {{currentTab==1 ? 'titleSelet' : 'title'}}" data-current="1" bindtap="swichNav">AP微积分备考秘籍</view>
+
+
+  </view>
+
+
+
+  <!--内容主体-->
+
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+
+    <swiper-item>
+
+      <view class="content" wx:for="{{one}}" wx:key="id" bindtap='toChild01'>
+        <view class="textbook" wx:for="{{item.two}}" wx:for-item="two" wx:key="id">
+          <view class="txtTop">{{two.title}}</view>
+          <view class="txtBottom"> {{two.txt}}</view>
+        </view>
+        <image class="img" src='{{item.images}}'></image>
+
+      </view>
+
+
+    </swiper-item>
+
+    <swiper-item>
+
+      <view class="content" wx:for="{{apti}}" wx:key="id" bindtap='toChild02'>
+        <view class="textbook" wx:for="{{item.two}}" wx:for-item="two" wx:key="id">
+          <view class="txtTop">{{two.title}}</view>
+          <view class="txtBottom"> {{two.txt}}</view>
+        </view>
+        <image class="img" src='{{item.images}}'></image>
+
+      </view>
+
+    </swiper-item>
+
+  </swiper>
+
 </view>

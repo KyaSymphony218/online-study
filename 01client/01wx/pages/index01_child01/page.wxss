@@ -1,0 +1,51 @@
+/* pages/index_child01/page.wxss */
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-bottom: 20rpx; 
+}
+.title{
+  width: 720rpx;
+  text-align: center;
+  font-size: 46rpx;
+  margin: 20rpx 0;
+}
+.ps{
+  width: 720rpx;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px dashed #999;
+}
+.ps text{
+  color: #5B7999;
+  margin: 0 30rpx;
+}
+.chanceme{
+  height: 90rpx;
+  width:720rpx;
+  margin: 20rpx 0;
+}
+.nav{
+  width: 720rpx;
+  background: #EDF6F4;
+  border: 1px solid #19544F;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing:border-box;
+  text-indent: 2em;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  letter-spacing: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  height: 400rpx;
+  width: 400rpx;
+  margin: 20rpx 0;
+}
