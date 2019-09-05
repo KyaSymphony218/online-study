@@ -1,45 +1,94 @@
-.page {
+/* pages/text/text.wxss */
+.pageM{
   margin-left: 10rpx;
   margin-right: 10rpx;
 }
-.nav{
-  flex: 1;
-  padding: 10rpx;
-}
-.nav .img{
+page {
   width: 100%;
-  height: 400rpx;
+  height: auto;
+  background: #f7f7f7;
+}
+.swiper-home {
+  height: 30vh;
+  width: 100%;
+}
+.block-box {
+  height: 30vh;
+  width: 100%;
+}
+.repair-img {
+  width: 100vw;
+  height: 30vh;
+}
+.nav {
+  background: white;
+  z-index: 99;
+  box-shadow: 0rpx -1.2rpx 10rpx 4rpx #dddddd99; /*for Android*/
+  -webkit-box-shadow: 0px -0.6px 5px 2px #dddddd99;
+}
+.positionFixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0rpx -1.2rpx 10rpx 4rpx #dddddd99; /*for Android*/
+  -webkit-box-shadow: 0px -0.6px 5px 2px #dddddd99;
 }
 
-.swiper-tab {
-  display: flex;
-  flex-direction: row;
-  line-height: 80rpx;
-  border-bottom: 4rpx solid #f0f2f7;
+/* 这个属性特别重要！！不然样式会崩掉 */
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
 }
-
-.tab-item {
+.one-tab {
   width: 50%;
+  float: left;
   text-align: center;
-  font-size: 15px;
-  color: #777;
+  padding: 10rpx 0;
+  height: 5.2vh;
+  line-height: 4.6vh;
 }
-
-.swiper {
-  height: 600px;
+.tab-title-select {
+  color: lightcoral;
+  font-size: 32rpx;
 }
-
-.title {
-  color: #bcbcbc;
-  font-size: 31rpx;
+.tab-title {
+  font-size: 32rpx;
 }
-
-.titleSelet {
-  color: #171717;
-  font-size: 36rpx;
-  border-bottom: 5rpx solid #2066ff;
+.one-tab-line {
+  width: 10vw;
+  border-bottom: 6rpx solid lightcoral;
+  margin-left: 20vw;
+  margin-top: 1vh;
+  margin-bottom: 0.2vh;
 }
-
+.center-tab {
+  width: 48vw;
+  float: left;
+  text-align: center;
+  padding: 10rpx 0;
+  height: 5.2vh;
+  line-height: 4.6vh;
+}
+.two-tab-line {
+  width: 10vw;
+  border-bottom: 6rpx solid lightcoral;
+  margin-left: 19vw;/*（48-10)/2让红线处在选项的中间*/
+  margin-top: 1vh;
+  margin-bottom: 0.2vh;
+}
+.tab {
+  float: left;
+  width: 26vw;
+  text-align: center;
+  padding: 10rpx 0;
+  height: 5.2vh;
+  line-height: 4.6vh;
+}
+.one-page {
+  background: white;
+  margin-top: 1vh;
+}
 .content{
   width: 100%;
   height: 300rpx;
@@ -77,4 +126,12 @@
 .img{
   width: 35%;
   height: 200rpx;
+}
+.two-page{
+    background: white;
+  margin-top: 1vh;
+}
+.recommend-img{
+  width: 100vw;
+  height: 36vh;
 }

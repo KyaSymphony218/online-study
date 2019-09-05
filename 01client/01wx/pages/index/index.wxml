@@ -1,35 +1,39 @@
-<view class="page">
-  <!-- 轮播图 -->
-  <view class="slideshow">
-  </view>
+<view class="pageM">
 
-    <swiper class='nav' indicator-dots='true' autoplay='true' duration='{{500}}' interval='{{2000}}'>
-      <view wx:for='{{imgUrls}}'>
+<view style="height: {{windowHeight}}px;">
+  <scroll-view bindscroll='layoutScroll' scroll-y="true" style="height: 100vh;">
+    <!-- swiper顶部图片轮播切换 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" class='swiper-home'>
+      <block wx:for="{{pictures}}" data-index="{{index}}" class='block-box' wx:key="{{index}}">
         <swiper-item>
-          <image class="img" src='{{item}}'></image>
+          <image src='{{item}}' class='repair-img'></image>
         </swiper-item>
-      </view>
+      </block>
     </swiper>
-  <!--顶部导航栏-->
 
-  <view class="swiper-tab">
+    <scroll-view scroll-x="true" class="nav {{navFixed? 'positionFixed':''}}">
+      <!-- 导航栏 -->
+      <view class='topTabSwiper'>
+        <view class='one-tab' data-current="0" bindtap='checkCurrent'>
+          <view data-current="0" class='{{currentData == 0 ? "tab-title-select" : "tab-title"}}'>介绍</view>
+          <view class='{{currentData == 0 ? "one-tab-line" : ""}}' data-current="0"></view>
+        </view>
+        <view class='center-tab' data-current="1" bindtap='checkCurrent'>
+          <view data-current="1" class='{{currentData == 1 ? "tab-title-select" : "tab-title"}}'>秘籍</view>
+          <view class='{{currentData == 1 ? "two-tab-line" : ""}}' data-current="1"></view>
+        </view>
 
-    <view class="tab-item {{currentTab==0 ? 'titleSelet' : 'title'}}" data-current="0" bindtap="swichNav">AP微积分介绍</view>
+        <!-- <view class='tab' data-current="2" bindtap='checkCurrent'>
+          <view data-current="2" class='{{currentData == 2 ? "tab-title-select" : "tab-title"}}'>评价</view>
+          <view class='{{currentData == 2 ? "one-tab-line" : ""}}' data-current="2"></view>
+        </view> -->
+      </view>
 
-    <view class="tab-item {{currentTab==1 ? 'titleSelet' : 'title'}}" data-current="1" bindtap="swichNav">AP微积分备考秘籍</view>
+    </scroll-view>
 
-
-  </view>
-
-
-
-  <!--内容主体-->
-
-  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
-
-    <swiper-item>
-
-      <view class="content" wx:for="{{one}}" wx:key="id" bindtap='toChild01'>
+    <!-- 切换0介绍的内容 -->
+    <view class='one-page' wx:if="{{currentData==0}}">
+     <view class="content" wx:for="{{one}}" wx:key="id" bindtap='toChild01'>
         <view class="textbook" wx:for="{{item.two}}" wx:for-item="two" wx:key="id">
           <view class="txtTop">{{two.title}}</view>
           <view class="txtBottom"> {{two.txt}}</view>
@@ -37,12 +41,10 @@
         <image class="img" src='{{item.images}}'></image>
 
       </view>
+    </view>
 
-
-    </swiper-item>
-
-    <swiper-item>
-
+    <!-- 切换1推荐的内容 -->
+    <view class='two-page' wx:if="{{currentData==1}}">
       <view class="content" wx:for="{{apti}}" wx:key="id" bindtap='toChild02'>
         <view class="textbook" wx:for="{{item.two}}" wx:for-item="two" wx:key="id">
           <view class="txtTop">{{two.title}}</view>
@@ -51,9 +53,14 @@
         <image class="img" src='{{item.images}}'></image>
 
       </view>
+    </view>
 
-    </swiper-item>
+    <!-- 切换2评价的内容 -->
+    <view class='three-page' wx:if="{{currentData==2}}">
+    </view>
+  </scroll-view>
+</view>
 
-  </swiper>
+<view class='evaluate' wx:if="{{currentData==2}}">评价</view>
 
 </view>

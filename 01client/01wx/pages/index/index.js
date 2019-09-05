@@ -1,16 +1,23 @@
 Page({
 
+  /**
+   * 页面的初始数据
+   */
   data: {
-    imgUrls: [
+    autoplay: true, //是否自动播放
+    circular: true, //是否采用衔接滑动
+    indicatorDots: true, //是否显示面板指示点
+    interval: 3000,
+    duration: 1000,
+    scrollTop: '', //滑动的距离
+    navFixed: false, //导航是否固定
+    currentData: 0,
+
+    pictures: [
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567610113333&di=a318eb54c4077c9ca16c31dab3438c5c&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190821%2F5ac4d19abed74a029143843ba40160fb.jpeg',
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567610136495&di=0f99acf8e546c57705f5bff4725fa6e8&imgtype=0&src=http%3A%2F%2Fimg.haokecheng.com%2Fupimages%2F01%2FE2%2F0E%2F46%2F3C1ADDF8.jpg',
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567610102863&di=1179e2496a9615ee0a742dd688dbab2c&imgtype=0&src=http%3A%2F%2Fimg.haokecheng.com%2Fupimages%2FC1%2F45%2F80%2F1E%2FA6DDA692.jpg'
     ],
-
-    // tab切换  
-
-    currentTab: 0,
-
     one: [{
       id: 1,
       images: 'https://upload-images.jianshu.io/upload_images/15721919-96553148cc3e6dea.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/782/format/webp',
@@ -90,7 +97,6 @@ Page({
     }]
 
   },
-
   toChild01: function () {
     wx.navigateTo({
       url: '../index01_child01/page',
@@ -102,99 +108,66 @@ Page({
       url: '../index02_child01/page',
     })
   },
-
-  swichNav: function (e) {
-
-    console.log(e);
-
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
     var that = this;
 
-    if (this.data.currentTab === e.target.dataset.current) {
-
-      return false;
-
-    } else {
-
-      that.setData({
-
-        currentTab: e.target.dataset.current,
-
-      })
-
-    }
-
-  },
-
-  swiperChange: function (e) {
-
-    console.log(e);
-
-    this.setData({
-
-      currentTab: e.detail.current,
-
+    /** 设备信息 */
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          pixelRatio: res.pixelRatio,
+          windowHeight: res.windowHeight,
+          windowWidth: res.windowWidth
+        })
+      },
     })
-
-
-
   },
 
-  onLoad: function (options) {
 
-    // 生命周期函数--监听页面加载
-
+  // 获取当前滑块的index
+  bindchange: function (e) {
+    console.log('获取当前滑块的index')
+    const that = this;
+    that.setData({
+      currentData: e.detail.current
+    })
   },
-
-  onReady: function () {
-
-    // 生命周期函数--监听页面初次渲染完成
-
-  },
-
-  onShow: function () {
-
-    // 生命周期函数--监听页面显示
-
-  },
-
-  onHide: function () {
-
-    // 生命周期函数--监听页面隐藏
-
-  },
-
-  onUnload: function () {
-
-    // 生命周期函数--监听页面卸载
-
-  },
-
-  onPullDownRefresh: function () {
-
-    // 页面相关事件处理函数--监听用户下拉动作
-
-  },
-
-  onReachBottom: function () {
-
-    // 页面上拉触底事件的处理函数
-
-  },
-
-  onShareAppMessage: function () {
-
-    // 用户点击右上角分享
-
-    return {
-
-      title: 'title', // 分享标题
-
-      desc: 'desc', // 分享描述
-
-      path: 'path' // 分享路径
-
+  //点击切换，滑块index赋值
+  checkCurrent: function (e) {
+    console.log('点击切换')
+    const that = this;
+    console.log(e.target.dataset.current)
+    if (that.data.currentData === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentData: e.target.dataset.current
+      })
     }
+  },
 
-  }
+  //监听滑动
+  layoutScroll: function (e) {
+    this.data.scrollTop = this.data.scrollTop * 1 + e.detail.deltaY * 1;
+    // console.log(this.data.scrollTop)
+    // console.log(this.data.navFixed)
 
+    /** 我这里写了固定值 如果使用rpx 可用query可以动态获取其他的高度 然后修改这里值 */
+    /** 获取方法参考文档 */
+
+    /** scrollTop 在模拟器上检测不是太灵敏 可在真机上测试 基本上不会出现延迟问题 */
+    var navtopHeight = 160;
+    if (this.data.scrollTop <= -navtopHeight) {
+      this.setData({
+        navFixed: true
+      })
+    } else {
+      this.setData({
+        navFixed: false
+      })
+    }
+  },
 })
