@@ -5,6 +5,8 @@
     "pages/index01_child01/page",
     "pages/index01_child02/page",
     "pages/index02_child01/page",
+    "pages/flash/flash",
+    "pages/video/video",
     "pages/user/user",
     "pages/money/money",
     "pages/textbookDetails/textbookDetails",
@@ -36,7 +38,7 @@
         "text": "教材"
       },
       {
-        "pagePath": "pages/03bookstore/03bookstore",
+        "pagePath": "pages/video/video",
         "iconPath": "imgs/vedio.png",
         "selectedIconPath": "imgs/vedio_select.png",
         "text": "视频"
