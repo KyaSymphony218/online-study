@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+}
+
+.use {
+  width: 700rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 45rpx;
+  margin-bottom: 50rpx;
+}
+
+.head {
+  width: 700rpx;
+  height: 300rpx;
+  background-image: "imgs/head01.png";
+  border-radius: 20rpx;
+}
+
+.content {
+  width: 650rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #e3e4e8;
+  border-radius: 25rpx;
+  padding: 20rpx;
+  box-shadow: 5rpx 5rpx 5rpx #e3e4e8;
+  margin-bottom: 30rpx;
+  margin-left: 32rpx;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+}
+
+.feature {
+  background: #e8eaff;
+  color: #798dfd;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+  font-size: 30rpx;
+}
+
+.imgBox {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.imgBox image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+
+.textBox .title {
+  font-size: 38rpx;
+  margin-bottom: 10rpx;
+}
+
+.author {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.chapter {
+  font-size: 30rpx;
+  color: #999;
+}
