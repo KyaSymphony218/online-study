@@ -1,0 +1,126 @@
+<!--pages/03bookstore/03bookstore.wxml-->
+
+<view class="coursePackage">
+<text>专业教材</text>
+
+<view class="package" bindtap="toDetails">
+<view><image class="img1" src="../../imgs/ap2.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《AP微积分辅导手册》</text>
+<text class="t1">AP考试用书</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 59.80</text>
+<text class="t1">5人已购</text>
+</view>
+</view>
+</view>
+</view>
+
+<!-- <view class="classify">
+<text>综合</text>
+<text>销量</text>
+<text>价格</text>
+<text>筛选</text>
+</view> -->
+
+<scroll-view class='headerBox' scroll-x="true">
+    <view class='classify' wx:for="{{topics}}" wx:key="index" wx:for-item="topic">
+      <view class='classifyItem' bindtap='clickTopItem' data-click="{{index}}">
+        <view class='{{indexSelect==index?"titleSelect":"title"}}'>{{topic.title}}</view>
+      </view>
+    </view>
+  </scroll-view>
+
+<view class="coursePackage">
+<text>精品推荐</text>
+
+<view class="package">
+<view><image class="img1" src="../../imgs/ap8.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《Lecture Notes in AP Calculus》</text>
+<text class="t1">教师用书</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 49.80</text>
+<text class="t1">月销6</text>
+</view>
+</view>
+</view>
+
+<view class="package">
+<view><image class="img1" src="../../imgs/ap6.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《AP微积分 AB》</text>
+<text class="t1">5分制胜 AP考试辅导教材</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 52.50</text>
+<text class="t1">月销17</text>
+</view>
+</view>
+</view>
+
+<view class="package">
+<view><image class="img1" src="../../imgs/ap3.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《微积分初步》</text>
+<text class="t1">上海教育出版社 AP课程</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 24.60</text>
+<text class="t1">月销22</text>
+</view>
+</view>
+</view>
+
+<view class="package">
+<view><image class="img1" src="../../imgs/ap4.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《普林斯顿微积分读本》</text>
+<text class="t1">修订版 微积分教材</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 66.80</text>
+<text class="t1">月销26</text>
+</view>
+</view>
+</view>
+
+<view class="package">
+<view><image class="img1" src="../../imgs/ap5.jpg"></image></view>
+
+<view class="content1">
+<view class="title1">
+<text class="t0">《AP微积分500题》</text>
+<text class="t1">五步速成系列 英文原版</text>
+</view>
+<view class="price">
+<text class="t2">定价:CNY 108.80</text>
+<text class="t1">3人付款</text>
+</view>
+</view>
+</view>
+
+<view class="baseline">
+<text>底线在此，无法突破</text>
+</view>
+
+</view>
+
+
+
+
+
+
+

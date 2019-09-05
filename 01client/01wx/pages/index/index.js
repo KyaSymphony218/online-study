@@ -91,6 +91,18 @@ Page({
 
   },
 
+  toChild01: function () {
+    wx.navigateTo({
+      url: '../index01_child01/page',
+    })
+  },
+
+  toChild02: function () {
+    wx.navigateTo({
+      url: '../index02_child01/page',
+    })
+  },
+
   swichNav: function (e) {
 
     console.log(e);
